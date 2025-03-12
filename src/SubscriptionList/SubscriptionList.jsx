@@ -27,7 +27,7 @@ function SubscriptionList() {
       <div className="subscriptions">
         {subscriptions.map(subscription => (
           <div className="subscription-item" key={subscription.id}>
-            <h3>Subscription:{subscription.attributes.title}</h3>
+            <h3>Subscription: {subscription.attributes.title}</h3>
             <p>Price: {subscription.attributes.price}</p>
             <p>Active Customer subs:{subscription.attributes.customers_subscribed}</p>
             <button>View Details</button>
