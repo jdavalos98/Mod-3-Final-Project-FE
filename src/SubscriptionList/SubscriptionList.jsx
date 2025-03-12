@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
 import './SubscriptionList.css'
 
 function SubscriptionList() {
@@ -8,8 +9,8 @@ function SubscriptionList() {
     fetch('http://localhost:3000/api/v1/subscriptions')
       .then(response => response.json())
       .then(data => {
-        console.log(data);  // Log the response to check structure
-        setSubscriptions(data.data);  // Update this line to access the 'data' array
+        console.log(data);
+        setSubscriptions(data.data);
       })
       .catch(error => console.error('Error fetching subscriptions', error));
   }, []);
@@ -18,6 +19,9 @@ function SubscriptionList() {
     <section className="subscription-list">
       <header className="list-header">
         <h2>Subscription List</h2>
+        <Link to="/" className="back-button">
+        Back
+        </Link>
       </header>
 
       <div className="subscriptions">
