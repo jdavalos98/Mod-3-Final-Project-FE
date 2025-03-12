@@ -14,9 +14,6 @@ function HomePage() {
         <Link to="/subscriptions" className="home-link">
           View All Subscriptions
         </Link>
-        <Link to="/about" className="home-link">
-          About Us
-        </Link>
       </nav>
     </section>
   )
