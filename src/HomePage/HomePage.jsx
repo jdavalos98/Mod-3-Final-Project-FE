@@ -6,8 +6,8 @@ function HomePage() {
   return (
     <section className="home-container">
       <header className="home-header">
-        <h1>Welcome to the Tea Subscription Service</h1>
-        <p>Your go-to platform for exploring and managing tea subscriptions</p>
+        <h1>Welcome to the Tea Subscription Admin Portal</h1>
+        <p>Your go-to platform for exploring and managing our tea subscriptions</p>
       </header>
 
       <nav className="home-nav">
