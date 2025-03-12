@@ -1,0 +1,44 @@
+.subscription-list {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: #f4f4f4;
+}
+
+.list-header {
+  margin-bottom: 1rem;
+}
+
+.subscriptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.subscription-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-item h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.subscription-item p {
+  margin: 0.5rem 0;
+}
+
+.subscription-item button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscription-item button:hover {
+  background-color: #0056b3;
+}
