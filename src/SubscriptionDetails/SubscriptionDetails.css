@@ -85,8 +85,8 @@
 .subscription-detail .back-button:hover {
   background-color: #495057;
 }
-.subscription-detail {
 
+.subscription-detail {
   background-color: #f4f4f4;
 }
 
@@ -101,7 +101,6 @@
 .subscription-info strong {
   color: black; 
 }
-
 
 .subscription-info button {
   padding: 10px 20px;
@@ -122,20 +121,73 @@
   transform: scale(0.98);
 }
 
-
 .subscription-info button:disabled {
   background-color: #ddd;
   cursor: not-allowed;
 }
-
 
 .subscription-info button[style*="background-color: red"] {
   background-color: #d9534f;
   color: white;
 }
 
-
 .subscription-info button[style*="background-color: green"] {
   background-color: #5bc0de;
   color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .subscription-detail {
+    padding: 15px;
+  }
+
+  .subscription-detail h2 {
+    font-size: 1.8rem;
+  }
+
+  .subscription-detail .subscription-info p {
+    font-size: 1.1rem;
+  }
+
+  .subscription-detail .customer-item,
+  .subscription-detail .tea-item {
+    padding: 8px;
+  }
+
+  .subscription-detail .status-button,
+  .subscription-detail .back-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscription-detail {
+    padding: 10px;
+  }
+
+  .subscription-detail h2 {
+    font-size: 1.6rem;
+  }
+
+  .subscription-detail .subscription-info p {
+    font-size: 1rem;
+  }
+
+  .subscription-detail .status-button,
+  .subscription-detail .back-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .subscription-detail .customer-item,
+  .subscription-detail .tea-item {
+    padding: 6px;
+  }
+
+  .subscription-detail .customer-list h3,
+  .subscription-detail .tea-list h3 {
+    font-size: 1.3rem;
+  }
 }
