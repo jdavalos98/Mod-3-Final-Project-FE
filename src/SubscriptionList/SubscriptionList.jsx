@@ -14,13 +14,12 @@ function SubscriptionList() {
       .then((data) => {
         console.log(data);
         setSubscriptions(data.data);
-        setFilteredSubscriptions(data.data); // Initially show all subscriptions
+        setFilteredSubscriptions(data.data);
       })
       .catch((error) => console.error('Error fetching subscriptions', error));
   }, []);
 
   useEffect(() => {
-    // Filter subscriptions based on the search term
     setFilteredSubscriptions(
       subscriptions.filter((subscription) =>
         subscription.attributes.title
