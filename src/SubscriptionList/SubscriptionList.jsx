@@ -30,7 +30,9 @@ function SubscriptionList() {
             <h3>Subscription: {subscription.attributes.title}</h3>
             <p>Price: {subscription.attributes.price}</p>
             <p>Active Customer subs:{subscription.attributes.customers_subscribed}</p>
+            <Link to={`/subscriptions/${subscription.id}`}>
             <button>View Details</button>
+            </Link>
           </div>
         ))}
       </div>

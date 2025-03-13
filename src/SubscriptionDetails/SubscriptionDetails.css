@@ -1,0 +1,141 @@
+.subscription-detail {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.subscription-detail h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.subscription-detail .subscription-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscription-detail .subscription-info p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.subscription-detail .subscription-info .status {
+  font-weight: bold;
+}
+
+.subscription-detail .customer-list,
+.subscription-detail .tea-list {
+  margin-top: 20px;
+}
+
+.subscription-detail .customer-list h3,
+.subscription-detail .tea-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.subscription-detail .customer-item,
+.subscription-detail .tea-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.subscription-detail .customer-item p,
+.subscription-detail .tea-item p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.subscription-detail .status-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-detail .status-button:hover {
+  background-color: #0056b3;
+}
+
+.subscription-detail .back-button {
+  display: inline-block;
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-detail .back-button:hover {
+  background-color: #495057;
+}
+.subscription-detail {
+
+  background-color: #f4f4f4;
+}
+
+.subscription-info h4 {
+  color: black; 
+}
+
+.subscription-title {
+  color: black;
+}
+
+.subscription-info strong {
+  color: black; 
+}
+
+
+.subscription-info button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  width: auto;
+}
+
+.subscription-info button:hover {
+  transform: scale(1.05);
+}
+
+.subscription-info button:active {
+  transform: scale(0.98);
+}
+
+
+.subscription-info button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+
+.subscription-info button[style*="background-color: red"] {
+  background-color: #d9534f;
+  color: white;
+}
+
+
+.subscription-info button[style*="background-color: green"] {
+  background-color: #5bc0de;
+  color: white;
+}
