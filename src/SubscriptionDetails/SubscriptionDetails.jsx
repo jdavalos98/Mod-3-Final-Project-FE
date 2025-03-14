@@ -26,20 +26,22 @@ function SubscriptionDetails() {
     }
   }, [subscriptionId]); 
 
-  const cancelSubscription = (subscriptionCustomerId, customerId) => {
-    fetch(`http://localhost:3000/api/v1/subscriptions/${subscriptionId}/subscription_customers/${subscriptionCustomerId}?customer_id=${customerId}`, {
+  const updateSubscriptionStatus = (subscriptionId, customerId, newStatus) => {
+
+    fetch(`http://localhost:3000/api/v1/subscriptions/${subscriptionId}/subscription_customers/${customerId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({}) 
+      body: JSON.stringify({
+        status: newStatus
+      }) 
     })
       .then(() => {
         setSubscriptionDetails((prevDetails) => {
           const updatedCustomers = prevDetails.attributes.customers.map((customer) => {
             if (customer.id === customerId) {
-            
-              return { ...customer, status: !customer.status };
+              return { ...customer, status: newStatus };
             }
             return customer; 
           });
@@ -53,7 +55,7 @@ function SubscriptionDetails() {
         });
       })
       .catch((error) => {
-        console.error('Error flipping subscription status:', error);
+        console.error('Error toggling subscription status:', error);
       });
   };
 
@@ -79,7 +81,10 @@ function SubscriptionDetails() {
               <p><strong>Customer: {customer.title}</strong></p>
               <p>Email: {customer.email}</p>
               <p>Status: {customer.status ? 'Active' : 'Cancelled'}</p>
-              <button className="cancel-button" onClick={() => cancelSubscription(customer.subscription_customer_id, customer.id)}>
+              <button 
+                className="cancel-button" 
+                onClick={() => updateSubscriptionStatus(subscriptionId, customer.id, !customer.status)}
+              >
                 {customer.status ? 'Cancel Subscription' : 'Reactivate Subscription'}
               </button>
             </li>
